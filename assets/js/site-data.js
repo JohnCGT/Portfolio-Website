@@ -34,7 +34,7 @@ const SITE_DATA = {
 
   socialLinks: [
     { label: "Facebook", icon: "bxl-facebook", href: "https://www.facebook.com/kaloizkie.22" },
-    { label: "Instagram", icon: "bxl-instagram", href: "https://www.instagram.com/kaloizkii/" },
+    { label: "LinkedIn", icon: "bxl-linkedin", href: "https://www.linkedin.com/in/john-carlo-tulin-809158369/" },
     { label: "GitHub", icon: "bxl-github", href: "https://github.com/JohnCGT" },
   ],
 
