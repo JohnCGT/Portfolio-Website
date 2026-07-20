@@ -203,7 +203,7 @@ function renderProjects() {
     const hasLiveDemo = project.liveHref && project.liveHref !== "#";
     return hasLiveDemo
       ? `<a href="${project.liveHref}" class="card-link" target="_blank" rel="noopener">
-           <i class='bx bx-link-external'></i> Live Demo
+           <i class='bx bx-link-external'></i> Website
          </a>`
       : "";
   };
@@ -291,6 +291,35 @@ function renderProjects() {
 }
 
 /**
+ * About page: work experience cards. One card per job in
+ * SITE_DATA.experience, an icon badge on the left (same circular
+ * badge look as the Quick Facts row), role and dates on the right.
+ */
+function renderExperience() {
+  const timelineSlot = document.getElementById("experience-timeline");
+  if (!timelineSlot) return;
+
+  timelineSlot.innerHTML = SITE_DATA.experience
+    .map((job) => {
+      const pointsHtml = job.points.map((point) => `<li>${point}</li>`).join("");
+
+      return `
+        <div class="timeline-item">
+          <span class="timeline-icon"><i class='bx bx-briefcase'></i></span>
+          <div class="timeline-content">
+            <div class="timeline-top">
+              <h3 class="timeline-role">${job.role}</h3>
+              <span class="tag timeline-period">${job.period}</span>
+            </div>
+            <p class="timeline-org">${job.organization}</p>
+            <ul class="timeline-points">${pointsHtml}</ul>
+          </div>
+        </div>`;
+    })
+    .join("");
+}
+
+/**
  * Contact page: each method (phone, email, location) becomes a
  * clickable row instead of a card, since I only had 3 methods and
  * a card grid felt like it was trying too hard to fill space.
@@ -352,6 +381,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderAboutSkillTags,
     renderAboutSummary,
     renderProjects,
+    renderExperience,
     renderContactMethods,
     initScrollSpy,
   ];
