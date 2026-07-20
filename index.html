@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Carlo Tulin | Junior Developer</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+    <div id="site-navbar"></div>
+    <noscript>
+        <p style="text-align:center; padding: 1rem; background:#0b0b0f; color:#fff;">
+            This site uses a little JavaScript to build the navigation and footer. Please enable JavaScript to view it properly.
+        </p>
+    </noscript>
+
+    <main>
+
+    <!-- HERO: the whole thing lives inside one big "editor window" instead of
+         a headline next to a small floating code card -->
+    <header id="home" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="ide-window fade-in fade-in-1">
+
+                <div class="ide-titlebar">
+                    <span class="ide-dots">
+                        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                    </span>
+                    <div class="ide-tabs">
+                        <span class="ide-tab active"><i class='bx bxl-javascript'></i>home.js</span>
+                        <span class="ide-tab"><i class='bx bx-git-branch'></i>main</span>
+                    </div>
+                    <span class="ide-status"><span class="status-dot"></span>Open to work</span>
+                </div>
+
+                <div class="ide-content">
+                    <div class="ide-gutter" aria-hidden="true">
+                        <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+                        <span>06</span><span>07</span><span>08</span><span>09</span><span>10</span>
+                        <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                        <span>16</span><span>17</span><span>18</span>
+                    </div>
+
+                    <div class="ide-main">
+                        <div class="row align-items-center gy-5">
+                            <div class="col-lg-7">
+                                <p class="eyebrow">// hi, my name is</p>
+                                <h1 class="display-4 fw-bold hero-title">John Carlo Tulin</h1>
+                                <p class="lead hero-sub">I build clean, responsive interfaces and work across the stack to bring ideas to life.</p>
+                                <p class="hero-text">Recent Computer Science graduate who enjoys turning designs into working, accessible web pages. Skilled in HTML, CSS, JavaScript, Bootstrap, and React, with backend experience in PHP, Laravel, Node.js, and MySQL.</p>
+
+                                <div class="d-flex flex-wrap gap-3 mt-4 hero-actions">
+                                    <a href="https://github.com/JohnCGT" class="btn btn-dark btn-lg px-4 rounded-3" target="_blank" rel="noopener">
+                                        <i class='bx bx-code-alt me-2'></i>My Projects
+                                    </a>
+                                    <a href="tel:+639287628547" class="btn btn-outline-dark btn-lg px-4 rounded-3">
+                                        <i class='bx bx-phone me-2'></i>Call Me
+                                    </a>
+                                </div>
+
+                                <div class="d-flex gap-3 mt-4 socials">
+                                    <a href="https://www.facebook.com/kaloizkie.22" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                                    <a href="https://www.instagram.com/kaloizkii/" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                                    <a href="https://github.com/JohnCGT" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5 d-none d-lg-block">
+                                <div class="hero-card">
+                                    <p class="mono-line"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></p>
+                                    <p class="mono-line"><span class="mono-key">const</span> <span class="mono-var">developer</span> = {</p>
+                                    <p class="mono-line ps-3">name: <span class="mono-str">"John Carlo Tulin"</span>,</p>
+                                    <p class="mono-line ps-3">role: <span class="mono-str">"Frontend Developer"</span>,</p>
+                                    <p class="mono-line ps-3">frontend: [<span class="mono-str">"HTML"</span>, <span class="mono-str">"CSS"</span>, <span class="mono-str">"JS"</span>, <span class="mono-str">"React"</span>],</p>
+                                    <p class="mono-line ps-3">backend: [<span class="mono-str">"PHP"</span>, <span class="mono-str">"Laravel"</span>, <span class="mono-str">"Node.js"</span>, <span class="mono-str">"MySQL"</span>]</p>
+                                    <p class="mono-line mono-cursor">};</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TECH STACK: built by renderTechStack() from SITE_DATA.techStack -->
+    <section class="stack-section">
+        <div class="container">
+            <p class="eyebrow text-center fade-in fade-in-1">// tech stack</p>
+            <h2 class="section-title text-center mb-2 fade-in fade-in-1">What I Work With</h2>
+            <p class="text-center section-sub mb-5 fade-in fade-in-2">Technologies I reach for most, grouped by where they fit in the stack.</p>
+
+            <div id="tech-stack-grid" class="fade-in fade-in-2">
+                <!-- filled by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS: built by renderProjects() from SITE_DATA.projects. the first
+         project (the real one) renders bigger, the rest fill the grid below it -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <p class="eyebrow text-center fade-in fade-in-1">// projects</p>
+            <h2 class="section-title text-center mb-2 fade-in fade-in-1">Featured Projects</h2>
+            <p class="text-center section-sub mb-5 fade-in fade-in-2">A few things I've been working on. More coming soon.</p>
+
+            <div id="projects-grid">
+                <!-- filled by main.js -->
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="https://github.com/JohnCGT" class="btn btn-outline-dark rounded-3 px-4" target="_blank" rel="noopener">
+                    See all projects on GitHub <i class='bx bx-right-arrow-alt ms-1'></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/site-data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
