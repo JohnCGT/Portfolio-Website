@@ -127,6 +127,26 @@ const SITE_DATA = {
     },
   ],
 
+  // still placeholder entries below, need to swap in my actual work
+  // history (internship, part time job, freelance work, whatever
+  // applies) once I have it written up properly. same idea as the
+  // project placeholders above, just fill in role, organization,
+  // period, and a couple of bullet points for each one.
+  experience: [
+    {
+      role: "Junior Web Developer",
+      organization: "Philippine Central Engagement Services Inc.",
+      period: "June 2025 - January 2026",
+      points: [
+        "Developed and maintained front-end features for the PWD-E job hiring platform using AngularJS, Bootstrap, HTML, CSS, and JavaScript.",
+        "Implemented backend functionality with PHP, including form handling, input validation, data sanitization, and database integration.",
+        "Designed UI/UX wireframes and high-fidelity prototypes in Figma, maintained WordPress websites, and assisted with website deployment and hosting configurations.",
+        "Performed functional, regression, and user acceptance testing (UAT), debugging front-end and back-end issues to improve application stability and reliability.",
+        "Implemented WCAG accessibility enhancements, collaborated using Git workflows, and contributed to a production platform serving over 5,000 users across multiple devices and browsers.",
+      ],
+    },
+  ],
+
   contactMethods: [
     {
       icon: "bx-phone",
