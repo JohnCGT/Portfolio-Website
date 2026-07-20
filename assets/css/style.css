@@ -795,6 +795,101 @@ h1, h2, h3, h4, h5, .navbar-brand {
     margin-bottom: 1.5rem;
 }
 
+/* each job is its own card instead of a plain divided row, same
+   hover lift as the project cards and the same icon badge look as
+   the facts row above, so this section actually feels tied to the
+   rest of the page instead of just being a list of text */
+.timeline-item {
+    display: flex;
+    gap: 1.25rem;
+    background-color: var(--paper);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 12px 28px rgba(11, 11, 15, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.timeline-item + .timeline-item {
+    margin-top: 1.25rem;
+}
+.timeline-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(11, 11, 15, 0.1);
+}
+.timeline-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--mist);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timeline-icon i {
+    font-size: 1.4rem;
+    color: var(--accent-dark);
+}
+.timeline-content {
+    flex: 1;
+    min-width: 0;
+}
+.timeline-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+}
+.timeline-role {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin: 0;
+}
+.timeline-period {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+.timeline-org {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+}
+.timeline-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.timeline-points li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--slate);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 0.55rem;
+}
+.timeline-points li:last-child {
+    margin-bottom: 0;
+}
+.timeline-points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--accent-dark);
+}
+@media (max-width: 575.98px) {
+    .timeline-item {
+        padding: 1.5rem;
+    }
+}
+
 /* ===== CONTACT PAGE ===== */
 .contact-section {
     padding-top: 150px;
